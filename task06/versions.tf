@@ -3,7 +3,7 @@ terraform {
   required_version = ">= 1.5.7"
   required_providers {
     azurerm = {
-      source  = "hashicorp/azurerm"
+      source = "hashicorp/azurerm"
       # Use the explicit range notation to exactly match the validator's expectation
       version = ">= 3.110.0, < 4.0.0"
     }

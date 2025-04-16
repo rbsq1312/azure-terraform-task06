@@ -32,7 +32,7 @@ resource "azurerm_mssql_server" "sql_server" {
   version                      = "12.0"
   administrator_login          = var.sql_admin_username
   administrator_login_password = random_password.sql_admin_password.result
-  
+
   tags = var.tags
 }
 
@@ -54,9 +54,9 @@ resource "azurerm_mssql_firewall_rule" "allow_specific_ip" {
 
 # Create SQL Database
 resource "azurerm_mssql_database" "sql_db" {
-  name                = var.sql_db_name
-  server_id           = azurerm_mssql_server.sql_server.id
-  sku_name            = var.sql_db_sku
-  
+  name      = var.sql_db_name
+  server_id = azurerm_mssql_server.sql_server.id
+  sku_name  = var.sql_db_sku
+
   tags = var.tags
 }
