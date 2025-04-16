@@ -1,11 +1,10 @@
 # outputs.tf - Output values from the root module
-
 output "sql_server_fqdn" {
-  description = "The fully qualified domain name of the SQL server"
+  description = "The fully qualified domain name of the SQL Server"
   value       = module.sql.sql_server_fqdn
 }
 
 output "app_hostname" {
-  description = "The hostname of the Web App"
-  value       = module.webapp.app_hostname
+  description = "The hostname of the Web Application"
+  value       = module.webapp.web_app_hostname
 }
